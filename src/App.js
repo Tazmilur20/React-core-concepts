@@ -7,18 +7,25 @@ function App() {
     {name:'Illustrator', price:'$89.99'},
     {name:'Adobe', price:'6.99'}
       ]
+  const nayoks=['a','b','c','d','e']
 
   return (
     <div className="App">
       <header className="App-header">
-      <Product product={products[0]}></Product>
+        <ul>
+           {nayoks.map(nayok=><li>{nayok}</li>)}
+        </ul>
+        {
+          products.map(product=><Product product={product}></Product>)
+        }
+      {/* <Product product={products[0]}></Product>
       <Product product={products[1]}></Product>
-      <Product product={products[2]}></Product>
+      <Product product={products[2]}></Product> */}
         {/* <Product name={products[0].name} price={products[0].price}></Product>
         <Product name={products[1].name} price={products[1].price}></Product>
         <Product name={products[2].name} price={products[2].price}></Product> */}
-        <Person name="tazmilur" job=" engr."></Person>
-        <Person name="roni" job=" business"></Person>
+        {/* <Person name="tazmilur" job=" engr."></Person>
+        <Person name="roni" job=" business"></Person> */}
         
         
       </header>
